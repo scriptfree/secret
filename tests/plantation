@@ -52,7 +52,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
                 Duration = 0.1;})
 
 while true do
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(72.9500732421875, -310.907470703125, -104.05709075927734)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(72.9486312866211, -280.16778564453125, -1349.539794921875)
 wait (1)
 end
 
@@ -65,7 +65,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
                 Duration = 0.1;})
 
 while true do
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.58275604248047, -310.907470703125, -103.96561431884766)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.45880126953125, -280.16778564453125, -1349.486083984375)
 wait (1)
 end
 
