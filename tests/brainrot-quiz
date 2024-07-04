@@ -1,3 +1,6 @@
+--CORDS: -61.417118072509766, 4.047658443450928, -607.6285400390625
+
+
 -- Define the target coordinates
 local targetPosition = Vector3.new(-61.417118072509766, 4.047658443450928, -607.6285400390625) -- Change these values to your desired coordinates
 
@@ -9,18 +12,18 @@ local function teleportPlayer()
     end
 end
 
--- Function to simulate holding the "E" key
-local function holdKeyE(duration)
+-- Function to simulate holding the "E" key for 1.5 seconds
+local function holdKeyE()
     local virtualUser = game:GetService("VirtualUser")
     virtualUser:CaptureController()
     virtualUser:SetKeyDown("0x45") -- "0x45" is the key code for "E"
-    wait(duration)
+    wait(1.5) -- Hold the "E" key for 1.5 seconds
     virtualUser:SetKeyUp("0x45")
 end
 
 -- Main loop
 while true do
     teleportPlayer()
-    holdKeyE(1.5)
+    holdKeyE()
     wait(6) -- Wait 1.5 seconds before repeating
 end
