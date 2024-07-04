@@ -1,29 +1,49 @@
---CORDS: -61.417118072509766, 4.047658443450928, -607.6285400390625
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Loaded!";
+                Text = "Provided by xubs script! ";
+                Duration = 1.5;})
 
 
--- Define the target coordinates
-local targetPosition = Vector3.new(-61.417118072509766, 4.047658443450928, -607.6285400390625) -- Change these values to your desired coordinates
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("EXTERMINATOR", "DarkTheme") 
 
--- Function to teleport the player
-local function teleportPlayer()
-    local player = game.Players.LocalPlayer
-    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Configs")
+
+
+
+Tab1Section:NewButton("Beat race", "Win!", function()
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61.417118072509766, 4.047658443450928, -607.6285400390625
+)
+
+end)
+
+
+
+Tab1Section:NewButton("Tp Tool", "Win!", function()
+
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "TP Tool"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+
+end)
+
+
+Tab1Section:NewButton("Reset", "Win!", function()
+
+local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.Health = 0
     end
-end
 
--- Function to simulate holding the "E" key for 1.5 seconds
-local function holdKeyE()
-    local virtualUser = game:GetService("VirtualUser")
-    virtualUser:CaptureController()
-    virtualUser:SetKeyDown("0x45") -- "0x45" is the key code for "E"
-    wait(1.5) -- Hold the "E" key for 1.5 seconds
-    virtualUser:SetKeyUp("0x45")
-end
-
--- Main loop
-while true do
-    teleportPlayer()
-    holdKeyE()
-    wait(6) -- Wait 1.5 seconds before repeating
-end
+end)
