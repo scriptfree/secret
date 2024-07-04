@@ -5,7 +5,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
 
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
-local Window = Library.CreateLib("NIGGER", "DarkTheme") 
+local Window = Library.CreateLib("Plantation UI", "DarkTheme") 
 
 
 local Tab1 = Window:NewTab("Autofarm")
