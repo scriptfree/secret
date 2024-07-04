@@ -1,0 +1,114 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Welcome!";
+                Text = "Enjoy using Doge Hub";
+                Duration = 1.5;})
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("NIGGER", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Autofarm")
+local Tab1Section = Tab1:NewSection("Scripts")
+
+
+
+function tp(pos) 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end
+function killall()
+    for i, v in pairs(game.Players:GetPlayers()) do
+        spawn(function()
+            pcall(function()
+                local ohVector31 = Vector3.new(-186.46624755859375, 49.74998474121094, math.random(-49.323232, 49.488882))
+                local ohVector32 = Vector3.new(-254.47802734375, 68.99893188476562, math.random(-49.323232, 49.488882))
+                local ohInstance3 = v.Character.LowerTorso
+                local ohVector34 = Vector3.new(-222.7018585205078, 60.864871978759766, math.random(-49.323232, 49.488882))
+                game:GetService("ReplicatedStorage").Remotes.Shoot:FireServer(ohVector31, ohVector32, ohInstance3, ohVector34)
+            end)
+        end)
+    end
+end
+function equipgun()
+    for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:FindFirstChild("Fire") then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+            break
+        end
+    end
+end
+
+
+
+
+
+
+
+
+Tab1Section:NewButton("Farm 1 - Left", "Load.", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+while true do
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(72.9500732421875, -310.907470703125, -104.05709075927734)
+wait (1)
+end
+
+end)
+
+Tab1Section:NewButton("Farm 2 - Right", "Load.", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+while true do
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.58275604248047, -310.907470703125, -103.96561431884766)
+wait (1)
+end
+
+end)
+
+Tab1Section:NewButton("Auto Kill", "Load.", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+while true do
+equipgun()
+killall()
+wait(0.1)
+end
+
+end)
+
+Tab1Section:NewButton("Anti AFK", "Load.", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Notification";
+                Text = "Success.";
+                Duration = 0.1;})
+
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,304,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,304,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,304,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by Warn"
+_b.TextColor3=Color3.new(1,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377379,0)
+ab.Size=UDim2.new(0,304,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Started"
+ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="You went idle."wait(2)ab.Text="Re-Enabled"end)
+
+end)
