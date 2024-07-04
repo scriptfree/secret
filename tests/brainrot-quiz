@@ -1,0 +1,26 @@
+-- Define the target coordinates
+local targetPosition = Vector3.new(-61.417118072509766, 4.047658443450928, -607.6285400390625) -- Change these values to your desired coordinates
+
+-- Function to teleport the player
+local function teleportPlayer()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+    end
+end
+
+-- Function to simulate holding the "E" key
+local function holdKeyE(duration)
+    local virtualUser = game:GetService("VirtualUser")
+    virtualUser:CaptureController()
+    virtualUser:SetKeyDown("0x45") -- "0x45" is the key code for "E"
+    wait(duration)
+    virtualUser:SetKeyUp("0x45")
+end
+
+-- Main loop
+while true do
+    teleportPlayer()
+    holdKeyE(1.5)
+    wait(6) -- Wait 1.5 seconds before repeating
+end
