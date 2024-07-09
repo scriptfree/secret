@@ -36,14 +36,6 @@ end
 end     
 end)
 
-Tab1Section:NewToggle("Auto Kill", "Kills everyone on the map", function(nigger)
-getgenv().autokill = nigger
-while getgenv().autokill and wait() do
-equipgun()
-killall()
-wait(0.01)
-end
-end)
 
 Tab1Section:NewButton("Anti AFK", "Never get kicked for being AFK", function()
 game.StarterGui:SetCore("SendNotification",{Title = "Notification",Text = "Anti-AFK started."})
