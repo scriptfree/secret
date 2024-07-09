@@ -8,7 +8,7 @@ getgenv().FLO = nigger
 while getgenv().FLO and wait(0.4) do
 
 while true do
-for i=1, 7500 do
+for i=1, 500 do
      local A_1 = "collectOrb"
 local A_2 = "Red Orb"
 local A_3 = "City"
@@ -25,7 +25,7 @@ Tab1Section:NewToggle("Gems", "Farm the right side", function(nigger)
 getgenv().FLR = nigger
 while getgenv().FLR and wait(0.4) do
 
-for i=1, 1000 do
+for i=1, 500 do
      local A_1 = "collectOrb"
 local A_2 = "Gem"
 local A_3 = "City"
@@ -59,6 +59,20 @@ Event:FireServer(A_1, A_2, A_3)
 end
 
 end)
+
+Tab1Section:NewButton("Outer Space", "Never get kicked for being AFK", function()
+
+game:GetService("TeleportService"):Teleport(3276265788)
+
+end)
+
+Tab1Section:NewButton("Speed Desert", "Never get kicked for being AFK", function()
+
+game:GetService("TeleportService"):Teleport(3276265788)
+
+end)
+
+
 
 
 Tab1Section:NewButton("Anti AFK", "Never get kicked for being AFK", function()
