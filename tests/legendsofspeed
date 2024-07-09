@@ -62,7 +62,7 @@ end)
 
 Tab1Section:NewButton("Outer Space", "Never get kicked for being AFK", function()
 
-game:GetService("TeleportService"):Teleport(3276265788)
+game:GetService("TeleportService"):Teleport(3232996272)
 
 end)
 
