@@ -1,0 +1,55 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("Zenith", "DarkTheme") 
+local Tab1 = Window:NewTab("Autofarm")
+local Tab1Section = Tab1:NewSection("Main")
+
+Tab1Section:NewToggle("Exp", "inf exp", function(nigger)
+getgenv().FLO = nigger
+while getgenv().FLO and wait(0.4) do
+
+while true do
+for i=1, 200 do
+     local A_1 = "collectOrb"
+local A_2 = "Red Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)
+end
+wait(0.1)
+end
+
+end
+end)
+
+Tab1Section:NewToggle("Gems", "Farm the right side", function(nigger)
+getgenv().FLR = nigger
+while getgenv().FLR and wait(0.4) do
+
+for i=1, 200 do
+     local A_1 = "collectOrb"
+local A_2 = "Gem"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)
+end
+
+end     
+end)
+
+Tab1Section:NewToggle("Auto Kill", "Kills everyone on the map", function(nigger)
+getgenv().autokill = nigger
+while getgenv().autokill and wait() do
+equipgun()
+killall()
+wait(0.01)
+end
+end)
+
+Tab1Section:NewButton("Anti AFK", "Never get kicked for being AFK", function()
+game.StarterGui:SetCore("SendNotification",{Title = "Notification",Text = "Anti-AFK started."})
+for a,b in pairs(getconnections(game.Players.LocalPlayer.Idled))do b:Disable()end
+end)
+
+Tab1Section:NewButton("Rejoin", "rejoin", function()
+game:service("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+end)
