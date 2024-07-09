@@ -60,6 +60,15 @@ end
 
 end)
 
+Tab1Section:NewButton("Rebirth", "Never get kicked for being AFK", function()
+
+local A_1 = "rebirthRequest"
+local Event = game:GetService("ReplicatedStorage").rEvents.rebirthEvent
+Event:FireServer(A_1)
+end
+
+end)
+
 Tab1Section:NewButton("Outer Space", "Never get kicked for being AFK", function()
 
 game:GetService("TeleportService"):Teleport(3232996272)
