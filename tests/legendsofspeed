@@ -8,7 +8,7 @@ getgenv().FLO = nigger
 while getgenv().FLO and wait(0.4) do
 
 while true do
-for i=1, 200 do
+for i=1, 7500 do
      local A_1 = "collectOrb"
 local A_2 = "Red Orb"
 local A_3 = "City"
@@ -25,7 +25,7 @@ Tab1Section:NewToggle("Gems", "Farm the right side", function(nigger)
 getgenv().FLR = nigger
 while getgenv().FLR and wait(0.4) do
 
-for i=1, 200 do
+for i=1, 1000 do
      local A_1 = "collectOrb"
 local A_2 = "Gem"
 local A_3 = "City"
