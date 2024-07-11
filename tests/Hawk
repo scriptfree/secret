@@ -1,0 +1,27 @@
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3766.534423828125, 1068.9580078125, -497.1818542480469)
+
+--Setting up UI lib
+
+_Hawk = "ohhahtuhthttouttpwuttuaunbotwo"
+local Hawk = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHzCihan/IDream/main/Libs/NewLib.lua", true))()
+
+local Window = Hawk:Window({
+	ScriptName = "RKelly UI",
+	DestroyIfExists = true, --if false, gui wont disappear
+	Theme = "Pink" --Themes: Pink, White, Dark
+})
+
+Window:Close({
+	visibility = true, --if false, close button will disappear
+	Callback = function()
+		Window:Destroy() --Destroying Gui Function
+	end,
+})
+
+--Tab Configs
+
+local tab1 = Window:Tab("Tab", "Main") 
+
+--Section Configs
+
+local newsec = tab1:Section("Main")
