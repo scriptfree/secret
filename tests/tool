@@ -1,9 +1,8 @@
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
-tool.Name = "Lyrical's Dildo"
+tool.Name = "Lyrical's Dildo Toy"
 tool.Activated:connect(function()
-
 loadstring(game:HttpGet"https://raw.githubusercontent.com/3aze/LLC/main/script/main.swift")()
-
+end)
 tool.Parent = game.Players.LocalPlayer.Backpack
