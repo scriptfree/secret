@@ -1,0 +1,47 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Loaded!";
+                Text = "Provided by xubs script! ";
+                Duration = 1.5;})
+
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/GdN5iRbt"))() 
+local Window = Library.CreateLib("EXTERMINATOR", "DarkTheme") 
+
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Configs")
+
+
+function equipgun()
+    for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:FindFirstChild("Gold Knife") then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+            break
+        end
+    end
+end
+
+function gunmod()
+_G.ncool = true
+local oldNamecall
+oldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(...)
+    local Method = getnamecallmethod()
+    local Arguments = {...}
+    local self = Arguments[1]
+    if _G.ncool and not checkcaller() and Method == "GetAttribute" and Arguments[2] == "Cooldown" then
+        return 0
+    end
+    return oldNamecall(self,...)
+end))
+end
+
+
+Tab1Section:NewButton("Beat race", "Win!", function()
+
+equipgun()
+gunmod()
+
+
+
+end)
+
